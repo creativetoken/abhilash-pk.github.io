@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Locus Vulnerability Scoring System (LVSS)</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-light light-bg">
+    <a class="navbar-brand" href="#" id="home-url">
+      <img src="https://locus.sh/assets/img/logo.svg" width="100" height="20" class="d-inline-block align-top">
+    </a>
+    <p class="cvss-title">
+        Locus Vulnerability Scoring System (FVSS)
+    </p>
+  </nav>
+  <div class="container">
+    <div class="card">
+      <div class="card-block card-block-text">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 ">
+            Confidentiality
+            <img src="images/info.svg" class="info-icon" height="15" width="15" data-toggle="tooltip" data-placement="bottom" title="Disclosure of Customer Data(PII), Secrets like Passwords,API Keys etc.">
+          </div>
+          <div class="col-lg-6 col-md-6 ">
+            <div class="btn-group btn-group-toggle input-space align-right" data-toggle="buttons">
+              <label class="btn btn-secondary radio-space px-lg-3" data-toggle="tooltip" data-placement="bottom" title="There is no loss of confidentiality.">
+                <input type="radio" name="Confidence" value="0">None
+              </label>
+              <label class="btn btn-secondary radio-space px-lg-3" data-toggle="tooltip" data-placement="bottom" title="An attacker will have access to some restricted information which doesnot have direct loss">
+                <input type="radio" name="Confidence" value="0.22">Low
+              </label>
+              <label class="btn btn-secondary radio-space px-lg-3" data-toggle="tooltip" data-placement="bottom" title="An attacker will have complete access to the information which can lead to mutiple exploits.">
+                <input type="radio" name="Confidence" value="0.56">High
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-block card-block-text">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 ">
+            Integrity
+            <img src="images/info.svg" class="info-icon" height="15" width="15" data-toggle="tooltip" data-placement="bottom" title="Tampering data during Transit.">
+          </div>
+          <div class="col-lg-6 col-md-6 ">
+            <div class="btn-group btn-group-toggle input-space align-right" data-toggle="buttons">
+              <label class="btn btn-secondary radio-space px-lg-3" data-toggle="tooltip" data-placement="bottom" title="It is not possible for an attacker to modify data in transit.">
+                <input type="radio" name="Integrity" value=0>None
+              </label>
+              <label class="btn btn-secondary radio-space px-lg-3" data-toggle="tooltip" data-placement="bottom" title="It is possible for an attacker to modify the data but cannot control the consequences of modification.">
+                <input type="radio" name="Integrity" value=0.22>Low
+              </label>
+              <label class="btn btn-secondary radio-space px-lg-3" data-toggle="tooltip" data-placement="bottom" title="An attacker is able to modify any/all files protected by the impacted component.">
+                <input type="radio" name="Integrity" value=0.56>High
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-block card-block-text">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 ">
+            Availability
+            <img src="images/info.svg" class="info-icon" height="15" width="15" data-toggle="tooltip" data-placement="bottom" title="Service Distruption beacuse of the attack / Exploit.">
+          </div>
+          <div class="col-lg-6 col-md-6 ">
+            <div class="btn-group btn-group-toggle input-space align-right" data-toggle="buttons">
+              <label class="btn btn-secondary radio-space px-lg-3" data-toggle="tooltip" data-placement="bottom" title="An attacker cannot deny availabilty of resources.">
+                <input type="radio" name="Availability" value="0">None
+              </label>
+              <label class="btn btn-secondary radio-space px-lg-3" data-toggle="tooltip" data-placement="bottom"
+                title="An attacker does not have the ability to completely deny service even the exploit is repeated. Reduced Performance or interruptions in sresource availabity is possible.">
+                <input type="radio" name="Availability" value="0.22">Low
+              </label>
+              <label class="btn btn-secondary radio-space px-lg-3" data-toggle="tooltip" data-placement="bottom" title="An attacker can completely deny access to resources and the loss can be temporary or permanent.">
+                <input type="radio" name="Availability" value="0.56">High
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-block card-block-text">
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            Privacy
+            <img src="images/info.svg" class="info-icon" height="15" width="15" data-toggle="tooltip" data-placement="bottom" title="Defines whether it is possible to identify a person with the Information Exposed.">
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="btn-group btn-group-toggle input-space align-right" data-toggle="buttons">
+              <label class="btn btn-secondary radio-space px-lg-3" data-toggle="tooltip" data-placement="bottom" title="Information exposed have impact on privacy.">
+                <input type="radio" name="Privacy" value="0.56">Yes
+              </label>
+              <label class="btn btn-secondary radio-space px-lg-3" data-toggle="tooltip" data-placement="bottom" title="Information exposed does not have impact on privacy.">
+                <input type="radio" name="Privacy" value="0">No
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-block card-block-text">
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            Skills Required
+            <img src="images/info.svg" class="info-icon" height="15" width="15" data-toggle="tooltip" data-placement="bottom" title="How technically skilled is this group of threat agents?">
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="btn-group btn-group-toggle input-space align-right" data-toggle="buttons">
+              <label class="btn btn-secondary radio-space px-lg-3" data-toggle="tooltip" data-placement="bottom" title="Minimal Technical Skill Requied - Example - Attacks carried out using pre-written Exploit code available over internet.">
+                <input type="radio" name="Exploitation" value=0.85>Beginner
+              </label>
+              <label class="btn btn-secondary radio-space px-lg-3" data-toggle="tooltip" data-placement="bottom" title="Attackers with knowledge to modify the exploit or utilise Tools to carry out the Exploit.">
+                <input type="radio" name="Exploitation" value=0.62>Intermediate
+              </label>
+              <label class="btn btn-secondary radio-space px-lg-3" data-toggle="tooltip" data-placement="bottom"
+                title="Attackers with expertise in Security Knowledge. Example - Writing own exploit code, security research, identifying Zero 0-days.">
+                <input type="radio" name="Exploitation" value=0.27>Advanced
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-block card-block-text">
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            User Interaction
+            <img src="images/info.svg" class="info-icon" height="15" width="15" data-toggle="tooltip" data-placement="bottom" title="Indicates the level of end user interaction is required for succesfull attack or exploit.">
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="btn-group btn-group-toggle input-space align-right" data-toggle="buttons">
+              <label class="btn btn-secondary radio-space px-lg-3" data-toggle="tooltip" data-placement="bottom" title="The vulnerable system can be exploited without any interaction from any user.">
+                <input type="radio" name="UserInteraction" value="0.85">None
+              </label>
+              <label class="btn btn-secondary radio-space px-lg-3" data-toggle="tooltip" data-placement="bottom"
+                title="Successful exploitation of this vulnerability requires a user to take some action before the vulnerability can be exploited">
+                <input type="radio" name="UserInteraction" value="0.62">Required
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card" id="card7">
+      <div class="card-block card-block-text" id="headingSeven">
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            Privileges Required
+            <img src="images/info.svg" class="info-icon" height="15" width="15" data-toggle="tooltip" data-placement="bottom" title="Defines the level of privilege required to sucessfully carry out the Attack / Exploit.">
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="btn-group btn-group-toggle input-space align-right" data-toggle="buttons">
+              <label class="btn btn-secondary radio-space px-lg-3" data-toggle="tooltip" data-placement="bottom"
+                title="The attacker is unauthorized prior to attack, and therefore does not require any access to settings or files of the the vulnerable system to carry out an attack.">
+                <input type="radio" name="Privileges" value="0.85">None
+              </label>
+              <label class="btn btn-secondary radio-space px-lg-3" data-toggle="tooltip" data-placement="bottom"
+                title="The attacker requires privileges that provide basic user capabilities that could normally affect only settings and files owned by a user. ">
+                <input type="radio" name="Privileges" value="0.62">Low
+              </label>
+              <label class="btn btn-secondary radio-space px-lg-3" data-toggle="tooltip" data-placement="bottom"
+                title="The attacker requires privileges that provide significant (e.g., administrative) control over the vulnerable component allowing access to component-wide settings and files.">
+                <input type="radio" name="Privileges" value="0.27">High
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" id="result-row">
+    </div>
+
+  </div>
+  <script src="script.js" charset="utf-8"></script>
+</body>
+
+</html>
