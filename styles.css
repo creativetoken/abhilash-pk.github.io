@@ -1,0 +1,112 @@
+.navbar-brand{
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.light-bg{
+  background-color: #F1F1F1;
+}
+
+.card-block-text{
+  margin: 20px 30px 0;
+}
+
+.card-body-text{
+  margin: 10px 30px;
+}
+
+.card{
+  background-color: #FFFFFF;
+  color: #3B3B3B;
+  margin: 30px 0;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.align-right{
+  float: right;
+  padding-bottom: 20px;
+}
+
+.align-left{
+  float: left;
+  padding-bottom: 20px;
+}
+
+.cvss-title{
+  font-size: 20px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.info-icon{
+  margin-left: 3px;
+  margin-bottom: 2px;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  background-color: #F7F7F7;
+  color: #3B3B3B;
+}
+
+h2{
+  color: #949494;
+  font-size: 14px;
+}
+
+.radio-space{
+  margin-right: 15px;
+}
+
+.input-space{
+  margin-top: 1%;
+}
+
+.btn{
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  font-size: 1em;
+  padding: 4px;
+}
+
+.btn:hover{
+  background-color: #275DC7;
+}
+
+.btn-secondary{
+  background-color: white;
+  color: black;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle{
+  background-color: #275DC7;
+}
+
+.btn-space{
+  margin: 3%;
+}
+
+.card{
+  margin: 20px 0;
+}
+
+.navbar{
+  padding: 0;
+}
+
+.container{
+  padding-top: 5px;
+}
+
+#home-url{
+  z-index: 1;
+}
